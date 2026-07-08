@@ -1,0 +1,33 @@
+.banner {
+  height: 450px;
+  background-image: url("/property-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+.banner-content {
+  max-width: 600px;
+  color: white;
+}
+
+.banner h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.banner button {
+  padding: 14px 30px;
+  border: none;
+  background: #d4a017;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+}
