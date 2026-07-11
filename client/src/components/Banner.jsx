@@ -1,23 +1,12 @@
 import "./Banner.css";
 
-function Banner() {
+export default function Banner() {
   return (
     <section className="banner">
-      <div className="banner-content">
-        <h1>
-          India's Trusted Property Exchange Network
-        </h1>
-
-        <p>
-          Buy, Sell & Invest in Verified Properties with Open Market Bidding
-        </p>
-
-        <button>
-          Explore Properties
-        </button>
-      </div>
+      <img
+        src="/property-banner.jpg"
+        alt="Assembly Syndicate Banner"
+      />
     </section>
   );
 }
-
-export default Banner;

@@ -1,18 +1,14 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Features from "./components/Features";
-import PropertySection from "./components/PropertySection";
-import SearchBar from "./components/SearchBar";
+import Banner from "./components/Banner";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
-      <SearchBar />
-      <Features />
-      <PropertySection />
-    </div>
+      <Banner />
+    </>
   );
 }
 
