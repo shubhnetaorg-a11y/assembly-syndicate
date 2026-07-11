@@ -51,7 +51,3 @@ function PropertySection() {
 }
 
 export default PropertySection;
-  );
-}
-
-export default PropertySection;

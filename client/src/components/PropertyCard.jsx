@@ -20,5 +20,3 @@ function PropertyCard({ image, title, location, price }) {
 }
 
 export default PropertyCard;
-
-export default PropertyCard;
