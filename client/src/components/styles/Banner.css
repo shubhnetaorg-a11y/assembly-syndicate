@@ -7,7 +7,6 @@
   border-radius: 15px;
 }
 
-/* Mobile View */
 @media (max-width: 768px) {
   .banner img {
     width: 90%;
