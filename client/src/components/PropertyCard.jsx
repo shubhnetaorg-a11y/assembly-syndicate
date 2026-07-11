@@ -1,22 +1,24 @@
 import "./styles/PropertyCard.css";
 
-function PropertyCard() {
+function PropertyCard({ image, title, location, price }) {
   return (
     <div className="property-card">
       <img
-        src="https://picsum.photos/400/250?random=1"
-        alt="Property"
+        src={image}
+        alt={title}
       />
 
-      <h3>Luxury Villa</h3>
+      <h3>{title}</h3>
 
-      <p>📍 Jaipur, Rajasthan</p>
+      <p>📍 {location}</p>
 
-      <p>💰 Starting Bid: ₹75,00,000</p>
+      <p>💰 Starting Bid: {price}</p>
 
       <button>View Details</button>
     </div>
   );
 }
+
+export default PropertyCard;
 
 export default PropertyCard;
