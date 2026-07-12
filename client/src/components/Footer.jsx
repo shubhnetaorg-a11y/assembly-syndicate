@@ -31,7 +31,7 @@ function Footer() {
 
           <p>📍 Jaipur, Rajasthan</p>
 
-          <p>📞 +91 XXXXX XXXXX</p>
+          <p>📞 +91 8058551127</p>
 
           <p>✉ info@assemblysyndicate.com</p>
         </div>
