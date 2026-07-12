@@ -1,22 +1,104 @@
 .header {
-  background-color: #0b3d91;
+  background: #0b3d91;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
 .logo {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logo-main {
+  color: #ffffff;
+}
+
+.logo-sub {
+  color: #ffd700;
+}
+
+.navbar {
+  display: flex;
+  gap: 28px;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
-  margin-left: 25px;
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.login-btn,
+.register-btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-btn {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: white;
+}
+
+.login-btn:hover {
+  background: white;
+  color: #0b3d91;
+}
+
+.register-btn {
+  background: #ffd700;
+  color: #0b3d91;
+}
+
+.register-btn:hover {
+  background: #ffcc00;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .header-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
 }
 
 .navbar a:hover {

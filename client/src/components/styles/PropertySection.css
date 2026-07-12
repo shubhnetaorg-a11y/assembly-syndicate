@@ -1,0 +1,40 @@
+.property-section {
+  padding: 80px 8%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.property-section h2 {
+  font-size: 38px;
+  color: #0b3d91;
+  margin-bottom: 15px;
+}
+
+.property-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 45px;
+  line-height: 1.6;
+}
+
+.property-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .property-section {
+    padding: 60px 20px;
+  }
+
+  .property-section h2 {
+    font-size: 30px;
+  }
+
+  .property-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
