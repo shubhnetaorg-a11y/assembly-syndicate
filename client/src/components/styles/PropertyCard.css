@@ -1,86 +1,49 @@
 .property-card {
   width: 320px;
   background: #fff;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transition: 0.3s ease;
 }
 
 .property-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 .property-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
-}
-
-.property-info {
-  padding: 20px;
-}
-
-.property-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.property-type {
-  background: #0b3d91;
-  color: white;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.verified-badge {
-  background: #28a745;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
+  display: block;
 }
 
 .property-card h3 {
-  color: #222;
-  margin-bottom: 12px;
+  font-size: 22px;
+  color: #0b3d91;
+  margin: 15px;
 }
 
 .property-card p {
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.property-card h4 {
-  color: #0b3d91;
-  margin-bottom: 18px;
+  margin: 8px 15px;
+  color: #555;
+  font-size: 15px;
 }
 
 .property-card button {
-  width: 100%;
+  width: calc(100% - 30px);
+  margin: 15px;
   padding: 12px;
-  background: #0b3d91;
-  color: white;
   border: none;
   border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
+  background: #0b3d91;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .property-card button:hover {
-  background: #082d6b;
-}
-
-@media (max-width: 768px) {
-  .property-card {
-    width: 100%;
-  }
+  background: #082c69;
 }

@@ -1,33 +1,23 @@
+import { useEffect, useState } from "react";
 import PropertyCard from "./PropertyCard";
+import { getProperties } from "../api";
 import "./styles/PropertySection.css";
 
 function PropertySection() {
-  const properties = [
-    {
-      image: "https://picsum.photos/400/250?random=1",
-      title: "Luxury Villa",
-      location: "Jaipur, Rajasthan",
-      price: "₹75,00,000",
-      type: "Buy",
-      verified: true,
-    },
-    {
-      image: "https://picsum.photos/400/250?random=2",
-      title: "Industrial Land",
-      location: "Amer, Rajasthan",
-      price: "₹3,00,00,000",
-      type: "Investment",
-      verified: true,
-    },
-    {
-      image: "https://picsum.photos/400/250?random=3",
-      title: "Premium Residential Plot",
-      location: "Shahpura, Rajasthan",
-      price: "₹90,00,000",
-      type: "Sell",
-      verified: false,
-    },
-  ];
+  const [properties, setProperties] = useState([]);
+
+  useEffect(() => {
+    const fetchProperties = async () => {
+      try {
+        const data = await getProperties();
+        setProperties(data.properties);
+      } catch (error) {
+        console.error("Error fetching properties:", error);
+      }
+    };
+
+    fetchProperties();
+  }, []);
 
   return (
     <section className="property-section" id="properties">
@@ -38,15 +28,19 @@ function PropertySection() {
       </p>
 
       <div className="property-grid">
-        {properties.map((property, index) => (
+        {properties.map((property) => (
           <PropertyCard
-            key={index}
-            image={property.image}
+            key={property._id}
+            image={
+              property.images?.length > 0
+                ? property.images[0].url
+                : "https://picsum.photos/400/250"
+            }
             title={property.title}
-            location={property.location}
-            price={property.price}
-            type={property.type}
-            verified={property.verified}
+            location={`${property.district}, ${property.state}`}
+            price={`₹${property.expectedPrice.toLocaleString("en-IN")}`}
+            type={property.listingType}
+            verified={property.isVerified}
           />
         ))}
       </div>
