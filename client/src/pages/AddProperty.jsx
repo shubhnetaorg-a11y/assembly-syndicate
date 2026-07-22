@@ -13,7 +13,7 @@ function AddProperty() {
     propertyType: "residential",
     expectedPrice: "",
     area: "",
-    areaUnit: "sqft",
+    areaUnit: "gaj",
 
     state: "",
     district: "",
@@ -110,7 +110,7 @@ function AddProperty() {
           propertyType:"residential",
           expectedPrice:"",
           area:"",
-          areaUnit:"sqft",
+          areaUnit:"Gaj",
 
           state:"",
           district:"",
@@ -285,17 +285,28 @@ function AddProperty() {
 
 
             <select
-              name="areaUnit"
-              value={formData.areaUnit}
-              onChange={handleChange}
-            >
+  name="areaUnit"
+  value={formData.areaUnit}
+  onChange={handleChange}
+>
 
-              <option value="sqft">Sq Ft</option>
-              <option value="bigha">Bigha</option>
-              <option value="acre">Acre</option>
+  <option value="gaj">Gaj</option>
 
+  <option value="sqft">Sq Ft</option>
 
-            </select>
+  <option value="sqyard">Sq Yard</option>
+
+  <option value="bigha">Bigha</option>
+
+  <option value="biswa">Biswa</option>
+
+  <option value="acre">Acre</option>
+
+  <option value="hectare">Hectare</option>
+
+  <option value="sqm">Square Meter</option>
+
+</select>
 
 
           </div>

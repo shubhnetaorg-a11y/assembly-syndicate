@@ -11,7 +11,6 @@ function Header() {
         <span className="logo-sub"> Syndicate</span>
       </Link>
 
-
       {/* Navigation */}
       <nav className="navbar">
 
@@ -19,7 +18,7 @@ function Header() {
 
         <a href="#services">Services</a>
 
-        <a href="#properties">Properties</a>
+        <Link to="/properties">Properties</Link>
 
         <a href="#professionals">Professionals</a>
 
@@ -29,28 +28,18 @@ function Header() {
 
       </nav>
 
-
       {/* Buttons */}
       <div className="header-buttons">
 
-
-        <Link 
-          to="/add-property" 
-          className="list-property-btn"
-        >
-          List Your Property FREE
-        </Link>
-
+      
 
         <button className="login-btn">
           Login
         </button>
 
-
         <button className="register-btn">
           Register
         </button>
-
 
       </div>
 
